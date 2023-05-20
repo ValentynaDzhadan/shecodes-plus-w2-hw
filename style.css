@@ -1,75 +1,75 @@
+a {
+  text-decoration: none;
+}
 .form-control:focus {
-    box-shadow: none;
-  }
-
-  .form-control-underlined {
-    border-width: 0;
-    border-bottom-width: 1px;
-    border-radius: 0;
-    padding-left: 0;
-  }
-
-  .container-style{
-      max-width: 700px;
-      padding: 40px;
-      margin: 60px auto;
-      border-radius: 20px;
-  }
-
-  .main-title{
-      font-size: 32px;
-      font-weight: 600;
-  }
-
-  .current-data-time{
-      font-size: 14px;
-  }
-  .location{
-      font-size: 20px;
-      margin: 0;
-  }
-
-  .local-temperature{
-      position: relative;
-      font-size: 54px;
-      margin: 0;
-  }
-
-  .local-temperature::after{
-      content: "℃";
-      position: absolute;
-      font-size: 20px;
-      top: 12px;
+  box-shadow: none;
 }
 
-.main-icon{
-    font-size: 75px;
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
 }
 
-.five-day-forecast{
-    font-weight: 700;
+.container-style {
+  max-width: 700px;
+  padding: 40px;
+  margin: 60px auto;
+  border-radius: 20px;
 }
 
-.card-title-style{
-    font-size: 16px;
-    text-align: center;
-    font-weight: 600;
+.main-title {
+  font-size: 32px;
+  font-weight: 600;
 }
 
-.row-card-style{
-    margin-top: 1px;
+.current-data-time {
+  font-size: 14px;
+}
+.location {
+  font-size: 20px;
+  margin: 0;
 }
 
-.col-style{
-    padding: 5px 5px;
-    margin: 0;
+.local-temperature {
+  position: relative;
+  font-size: 54px;
+  margin: 0;
 }
-.card-text-style{
-    padding: 5px;
-    text-align: center;
-    font-size: 26px;
-}
-.celsius{
-    font-size: 15px;
 
+sup.local-temperature-units {
+  top: -26px;
+  font-size: 20px;
+}
+
+.main-icon {
+  font-size: 75px;
+}
+
+.five-day-forecast {
+  font-weight: 700;
+}
+
+.card-title-style {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.row-card-style {
+  margin-top: 1px;
+}
+
+.col-style {
+  padding: 5px 5px;
+  margin: 0;
+}
+.card-text-style {
+  padding: 5px;
+  text-align: center;
+  font-size: 26px;
+}
+.celsius {
+  font-size: 15px;
 }

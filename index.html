@@ -27,10 +27,12 @@
       <div class="row">
         <div class="col-6">
           <h1 class="main-title">Weather forecast</h1>
-          <p class="current-data-time">Monday 03.02.2023, 21:26</p>
+          <p class="current-data-time" id="current-data">
+            Monday 03.02.2023, 21:26
+          </p>
         </div>
         <div class="col-6">
-          <form action="">
+          <form action="" id="search-city-form">
             <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
               <div class="input-group">
                 <input
@@ -38,6 +40,7 @@
                   placeholder="Enter a city?"
                   aria-describedby="button-addon1"
                   class="form-control border-0 bg-light"
+                  id="city-input"
                 />
                 <div class="input-group-append">
                   <button
@@ -55,8 +58,14 @@
       </div>
       <div class="row align-items-center">
         <div class="col-3">
-          <p class="location">Kyiv, Ukraine</p>
-          <p class="local-temperature">15</p>
+          <p class="location">Kyiv</p>
+          <p class="local-temperature">
+            <span class="local-temperature-number">15</span>
+            <sup class="local-temperature-units"
+              ><a id="local-temp-celsius" href="#">℃</a> |
+              <a id="local-temp-fahrenheit" href="#">℉</a></sup
+            >
+          </p>
         </div>
         <div class="col-3">
           <p class="main-icon">☀️</p>
