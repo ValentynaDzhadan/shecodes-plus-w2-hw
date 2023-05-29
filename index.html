@@ -18,6 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 
     <title>Weather App</title>
@@ -32,28 +33,38 @@
           </p>
         </div>
         <div class="col-6">
-          <form action="" id="search-city-form">
-            <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
-              <div class="input-group">
-                <input
-                  type="search"
-                  placeholder="Enter a city?"
-                  aria-describedby="button-addon1"
-                  class="form-control border-0 bg-light"
-                  id="city-input"
-                />
-                <div class="input-group-append">
-                  <button
-                    id="button-addon1"
-                    type="submit"
-                    class="btn btn-link text-primary"
-                  >
-                    <i class="fa fa-search"></i>
-                  </button>
+          <div class="row mb-3">
+            <form action="" id="search-city-form">
+              <div class="p-1 bg-light rounded rounded-pill shadow-sm">
+                <div class="input-group">
+                  <input
+                    type="search"
+                    placeholder="Enter a city?"
+                    aria-describedby="button-addon1"
+                    class="form-control border-0 bg-light"
+                    id="city-input"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      id="button-addon1"
+                      type="submit"
+                      class="btn btn-link text-primary"
+                    >
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
+          <div class="row justify-content-end">
+            <button
+              type="button"
+              class="btn btn-outline-primary btn-sm rounded rounded-pill shadow-sm current-location-btn"
+            >
+              Current location
+            </button>
+          </div>
         </div>
       </div>
       <div class="row align-items-center">
@@ -67,13 +78,11 @@
             >
           </p>
         </div>
-        <div class="col-3">
-          <p class="main-icon">☀️</p>
-        </div>
+        <div class="col-3 main-icon"></div>
         <div class="col-6">
           <p class="align-middle">
-            Precipitation: 66% <br />
-            Wind: 5km/h
+            Humidity: <span class="local-humidity">66</span>% <br />
+            Wind: <span class="local-speed-wind">5</span>km/h
           </p>
         </div>
       </div>

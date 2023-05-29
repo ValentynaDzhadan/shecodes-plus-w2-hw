@@ -24,6 +24,11 @@ a {
   font-weight: 600;
 }
 
+.current-location-btn {
+  max-width: 150px;
+  margin-right: 12px;
+}
+
 .current-data-time {
   font-size: 14px;
 }
