@@ -37,12 +37,6 @@ const minutes = now.getMinutes().toString().padStart(2, "0");
 currentData.innerHTML = `${dayOfWeek} ${day}.${month}.${year}, ${hours}:${minutes}`;
 
 // searched city
-function capitalizeCity(city) {
-  return city
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
 
 function showLocalWeather(city, temp, wind, humidity, icon) {
   locationCity.innerHTML = city;
@@ -51,12 +45,14 @@ function showLocalWeather(city, temp, wind, humidity, icon) {
   humidityUnit.innerHTML = humidity;
   mainIcon.innerHTML = `<img src=" https://openweathermap.org/img/wn/${icon}@2x.png" alt="" />`;
 }
+function searchCity(city) {
+  axios.get(baseUrl + `&q=${city}`).then(showWeatherUnits);
+}
 
 function showForecast(event) {
   event.preventDefault();
-  const city = cityInput.value.trim().toLocaleLowerCase();
-  const capitalizedCity = capitalizeCity(city);
-  axios.get(baseUrl + `&q=${capitalizedCity}`).then(showWeatherUnits);
+  const city = cityInput.value.trim();
+  searchCity(city);
 }
 
 searchCityForm.addEventListener("submit", showForecast);
@@ -99,3 +95,5 @@ function showCurrentLocationForecast() {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 currentLocationBtn.addEventListener("click", showCurrentLocationForecast);
+
+searchCity("London");
